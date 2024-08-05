@@ -1,5 +1,4 @@
-/* styles.css */
-
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -42,7 +41,8 @@ section h2 {
     border-bottom: 2px solid #4CAF50;
     padding-bottom: 10px;
 }
-.port-title{
+
+.port-title {
     border-bottom: 2px solid #4CAF50;
     padding-bottom: 10px;
     margin-left: 20px;
@@ -55,13 +55,14 @@ section h2 {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
 .project img {
     max-width: 100%;
     height: auto;
-    border-radius: 50%; /* Makes the image circular */
-    width: 150px; /* Adjust the width as needed */
-    height: 150px; /* Adjust the height as needed */
-    object-fit: cover; /* Ensures the image covers the container */
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
 footer {
@@ -77,13 +78,13 @@ a {
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: max-content; /* Adjust the container width to fit the content */
-    margin: 0 auto; /* Center the container */
+    width: max-content;
+    margin: 0 auto;
 }
 
 .skill {
@@ -109,12 +110,11 @@ a {
 
 #Projects {
     display: grid;
-    grid-template-columns: repeat(4, 0fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 5px; 
     grid-row-gap: 2px; 
     justify-content: center;
 }
-
 
 .project {
     border-radius: 15px;
@@ -132,8 +132,6 @@ a {
     border-radius: 15px;
 }
 
-
-
 header .profile-img {
     border-radius: 50%;
     width: 150px;
@@ -141,6 +139,7 @@ header .profile-img {
     border: 5px solid #fff;
     margin-left: 20px;
 }
+
 .education {
     display: flex;
     justify-content: center;
@@ -156,9 +155,10 @@ header .profile-img {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 #attachments {
     display: grid;
-    grid-template-columns: repeat(8, 1fr); 
+    grid-template-columns: repeat(4, 1fr); 
     grid-gap: 10px; 
     padding: 20px; 
 }
@@ -201,4 +201,38 @@ header .profile-img {
 
 .btn:hover {
     background-color: #0056b3; 
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    #Projects, #attachments {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #Projects, #attachments {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .education-info {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    #Projects, #attachments {
+        grid-template-columns: 1fr;
+    }
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+    .education-info {
+        width: 100%;
+    }
+    .project, .details-container {
+        width: 90%;
+    }
 }
