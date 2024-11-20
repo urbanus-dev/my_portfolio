@@ -110,10 +110,12 @@ a {
 
 #Projects {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 5px; 
     grid-row-gap: 2px; 
     justify-content: center;
+    align-items: center;
+   
 }
 
 .project {
